@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Exo 10 JS</title>
+
+    </head>
+    <body>
+        <h1>Exercice 10 : Récapitulons</h1>
+        <p>Le jeu du plus ou moins</p>
+        <input type="number" id="numentrer">
+        <input type="button" value="Vérifier" onclick="test()">
+    </body>
+    <script>
+    function aleanum(max){
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+  var numtoguess=aleanum(100)
+  console.log(numtoguess)
+  function test(){
+  var numentrer=document.getElementById("numentrer").value;
+  if (numentrer==numtoguess){
+    alert("Bravo vous avez deviné!");}
+  else if (numentrer>numtoguess){
+    alert("Votre nombre est trop grand");}
+  else if(numentrer<numtoguess){
+    alert("Votre nombre est trop petit");}
+  else {
+    alert("Votre nombre est hors de la porté");
+  }
+  }
+    </script>
+</html>
